@@ -8,9 +8,7 @@ import (
 
 func main() {
 	// Tell the user the server is starting
-	fmt.Println("🔥 Litt Up - Electrician App")
-	fmt.Println("🚀 Server starting on http://localhost:8080")
-	fmt.Println("📂 Press Ctrl+C to stop the server")
+	fmt.Println("Server starting on http://localhost:8080")
 
 	// Serve all files in the "static" folder
 	// When someone visits /styles.css, it looks in static/styles.css
@@ -34,6 +32,6 @@ func main() {
 	// If there's an error, log it and stop
 	err := http.ListenAndServe(":8080", nil)
 	if err != nil {
-		log.Fatal("❌ Server failed to start:", err)
+		log.Fatal(" Server failed to start:", err)
 	}
 }
