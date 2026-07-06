@@ -513,3 +513,43 @@ footer strong {
     }
 }
 url(../../../Downloads/4.jpeg) url(../../../Downloads/3.jpeg) url(../../../Downloads/2.jpeg) url(../../../Downloads/one.jpg)
+/* ============================================ */
+/* FIX CONTACT SECTION ALIGNMENT                */
+/* ============================================ */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+    /* Changed from 'stretch' to 'start' */;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* Reduced gap for tighter spacing */;
+}
+
+.contact-form {
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    height: fit-content;
+    /* Makes form only as tall as its content */;
+}
+
+/* Make contact items more compact */
+.contact-item {
+    padding: 16px 20px;
+    /* Reduced padding */;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
