@@ -21,6 +21,12 @@ body {
     padding: 0 20px;
 }
 
+/* FORCE navigation container to have NO padding */
+nav .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+}
 /* ============================================ */
 /* NAVIGATION                                   */
 /* ============================================ */
@@ -40,6 +46,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 .logo {
@@ -48,6 +56,8 @@ nav {
     gap: 10px;
     font-size: 1.5rem;
     font-weight: 700;
+    margin-left: 20px !important;
+    padding-left: 0 !important;
 }
 
 .logo-text {
@@ -233,7 +243,7 @@ h2::after {
     background: #ffffff;
     border-radius: 16px;
     padding: 32px 20px;
-    text-align: center;
+    text-align: center !important ;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -534,4 +544,48 @@ footer strong {
     .contact-item {
         padding: 12px 16px;
     }
+}
+/* ============================================ */
+/* SERVICE CARDS - HOVER ZOOM                  */
+/* ============================================ */
+
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.12);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+/* ============================================ */
+/* GALLERY IMAGES - HOVER ZOOM                 */
+/* ============================================ */
+
+.gallery-item {
+    overflow: hidden;
+}
+
+.gallery-item img {
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+/* ============================================ */
+/* FORCE SERVICES SUBTITLE TO CENTER           */
+/* ============================================ */
+
+.services-subtitle {
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    color: #6b7280;
+    margin-top: -20px;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
 }

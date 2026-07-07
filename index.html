@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>INKA LittUp - Electrical Solutions</title>
+    
+    <!-- Social Preview Image (for WhatsApp, Google, Facebook) -->
+    <meta property="og:title" content="INKA LittUp - Electrical Solutions" />
+    <meta property="og:description" content="Your trusted electrical partner in Kisii. From piping to installation, we bring light and power to homes and businesses." />
+    <meta property="og:image" content="https://yourdomain.com/static/cover.jpg" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Favicon (small icon in browser tab) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>" />
+    
     <link rel="stylesheet" href="/static/styles.css" />
 </head>
 <body>
@@ -13,8 +24,11 @@
     <!-- ============================================ -->
     <nav>
         <div class="container nav-container">
-            <div class="logo">
-                <span class="logo-text">INKA LittUp</span>
+            <div class="logo" style="margin-left: 20px; padding-left: 0;">
+                <span class="logo-text" style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: 1.8rem;">💡</span>
+                    INKA LittUp
+                </span>
             </div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
@@ -26,9 +40,9 @@
     </nav>
 
     <!-- ============================================ -->
-    <!-- HERO SECTION                                -->
+    <!-- HERO SECTION WITH COVER IMAGE               -->
     <!-- ============================================ -->
-    <section class="hero">
+    <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/static/cover.jpg'); background-size: cover; background-position: center; min-height: 95vh; display: flex; align-items: center;">
         <div class="container hero-content">
             <h1>INKA <span class="highlight">LittUp</span> Electrical Solutions</h1>
             <p class="hero-subtitle">
@@ -80,31 +94,53 @@
     </section>
 
     <!-- ============================================ -->
-    <!-- SERVICES SECTION                             -->
+    <!-- SERVICES SECTION - CLEAN VERSION            -->
     <!-- ============================================ -->
     <section id="services" class="services">
         <div class="container">
             <h2>What We Do</h2>
+            <p class="services-subtitle">If it is Electrical, We most certainly do it</p>
             <div class="service-grid">
+                <!-- Service 1: Residential -->
                 <div class="service-card">
-                    <div class="service-icon">🔌</div>
-                    <h3>Installation</h3>
-                    <p>Lighting, sockets, switchgear, distribution boards &amp; more.</p>
+                    <div class="service-icon">🏠</div>
+                    <h3>Residential Wiring</h3>
+                    <p>Complete home electrical installations, rewiring, and renovations.</p>
                 </div>
+                
+                <!-- Service 2: Solar -->
                 <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>Piping &amp; Conduit</h3>
-                    <p>Professional pipe runs, trunking, and cable management.</p>
+                    <div class="service-icon">☀️</div>
+                    <h3>Solar Installation</h3>
+                    <p>Solar panels, inverters, battery storage, and off-grid solutions.</p>
                 </div>
+                
+                <!-- Service 3: Commercial -->
                 <div class="service-card">
-                    <div class="service-icon">🏗️</div>
-                    <h3>Construction Wiring</h3>
-                    <p>Ground-up electrical for new buildings &amp; renovations.</p>
+                    <div class="service-icon">🏢</div>
+                    <h3>Commercial Electrical</h3>
+                    <p>Shops, offices, and business electrical systems and installations.</p>
                 </div>
+                
+                <!-- Service 4: Smart Home -->
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>Smart Home</h3>
+                    <p>Home automation, lighting control, security systems, and more.</p>
+                </div>
+                
+                <!-- Service 5: Backup Power -->
                 <div class="service-card">
                     <div class="service-icon">⚡</div>
-                    <h3>Repairs &amp; Maintenance</h3>
-                    <p>Fault finding, upgrades, and emergency call-outs.</p>
+                    <h3>Backup Power</h3>
+                    <p>Generators, UPS systems, and standby power solutions.</p>
+                </div>
+                
+                <!-- Service 6: Lighting -->
+                <div class="service-card">
+                    <div class="service-icon">💡</div>
+                    <h3>Lighting Design</h3>
+                    <p>Indoor, outdoor, and energy-efficient lighting solutions.</p>
                 </div>
             </div>
         </div>
@@ -137,66 +173,63 @@
         </div>
     </section>
 
-                <!-- ============================================ -->
-                <!-- CONTACT SECTION WITH 5 SEPARATE ROWS         -->
-                <!-- ============================================ -->
-                <section id="contact" class="contact">
-                    <div class="container">
-                        <h2>Get In Touch</h2>
-                        <p class="contact-subtitle">
-                            Need value for money? Better get LittUp.
-                        </p>
-                        <div class="contact-grid">
-                            <!-- LEFT SIDE: Contact Info (5 separate rows) -->
-                            <div class="contact-info">
-                                <div class="contact-item">
-                                    <span class="contact-label">📱 Phone</span>
-                                    <a href="tel:+254712345678">+254 712 345 678</a>
-                                </div>
-                                
-                                <div class="contact-item">
-                                    <span class="contact-label">✉️ Email</span>
-                                    <a href="mailto:info@littup.co.ke">info@littup.co.ke</a>
-                                </div>
-                                
-                                <div class="contact-item">
-                                    <span class="contact-label">📍 Location</span>
-                                    <span>Kisii, Kenya</span>
-                                </div>
-                                
-                                <div class="contact-item">
-                                    <span class="contact-label">⏰ Hours</span>
-                                    <span>Mon&ndash;Sat: 7:00 AM &ndash; 6:00 PM</span>
-                                </div>
-                                
-                                <!-- WHATSAPP BUTTON - Row 5 -->
-                                <div style="background: #dcfce7; border: 2px solid #22c55e; padding: 14px 20px; border-radius: 12px;">
-                                    <a href="https://wa.me/254712345678?text=Hallo%20INKA%20LittUp!%20I%20need%20an%20electrician." 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    style="display: flex; align-items: center; gap: 12px; background: #25D366; color: white; padding: 12px 24px; border-radius: 40px; text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: all 0.2s; width: 100%; justify-content: center; border: none;">
-                                        <span style="font-size: 1.5rem;">💬</span>
-                                        Chat with us on WhatsApp
-                                    </a>
-                                </div>
-                            </div>
-                            
-                            <!-- RIGHT SIDE: Contact Form -->
-                            <div class="contact-form">
-                                <form action="#" method="POST">
-                                    <input type="text" placeholder="Your Name" required />
-                                    <input type="email" placeholder="Your Email" required />
-                                    <input type="tel" placeholder="Your Phone" />
-                                    <textarea rows="4" placeholder="Tell us about your project..."></textarea>
-                                    <button type="submit" class="btn btn-primary">Send Message</button>
-                                </form>
-                                <p class="form-note">
-                                    We will get back to you within 24 hours.
-                                </p>
-                            </div>
-                        </div>
+    <!-- ============================================ -->
+    <!-- CONTACT SECTION                              -->
+    <!-- ============================================ -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="contact-subtitle">
+                Need value for money? Better get LittUp.
+            </p>
+            <div class="contact-grid">
+                <!-- LEFT SIDE: Contact Info -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-label">Phone</span>
+                        <a href="tel:+254712345678">+254 101 665 969</a>
                     </div>
-                </section>
+                    <div class="contact-item">
+                        <span class="contact-label">Email</span>
+                        <a href="mailto:info@littup.co.ke">info@littup.co.ke</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Location</span>
+                        <span>Kisii, Kenya</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Hours</span>
+                        <span>Mon&ndash;Sat: 7:00 AM &ndash; 9:00 PM</span>
+                    </div>
+                    
+                    <!-- WHATSAPP BUTTON -->
+                    <div style="background: #dcfce7; border: 2px solid #22c55e; padding: 14px 20px; border-radius: 12px;">
+                        <a href="https://wa.me/254101665969?text=Hallo%20INKA%20LittUp!%20I%20need%20an%20electrician." 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           style="display: flex; align-items: center; gap: 12px; background: #25D366; color: white; padding: 12px 24px; border-radius: 40px; text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: all 0.2s; width: 100%; justify-content: center; border: none;">
+                            <span style="font-size: 1.5rem;">💬</span>
+                            Chat with us on WhatsApp
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- RIGHT SIDE: Contact Form -->
+                <div class="contact-form">
+                    <form action="#" method="POST">
+                        <input type="text" placeholder="Your Name" required />
+                        <input type="email" placeholder="Your Email" required />
+                        <input type="tel" placeholder="Your Phone" />
+                        <textarea rows="4" placeholder="Tell us about your project..."></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    <p class="form-note">
+                        We will get back to you within 24 hours.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- ============================================ -->
     <!-- FOOTER                                       -->
