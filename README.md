@@ -26,7 +26,7 @@ This project was built as a complete, professional web presence for **INKA LittU
 | **Mobile-First** | Optimized for mobile viewing and interactions |
 
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Technology | Purpose |
 | :--- | :--- |
@@ -88,6 +88,7 @@ Auto-Deploy: Any changes pushed to the main branch on GitHub will automatically 
 Challenge	Solution
 Hero image cropping on mobile	Used background-size: contain with a dark background color to fill empty space
 Lightbox gallery	Used pure CSS :target selector for full-screen image viewing
+WhatsApp Integration;  Used WhatsApp deep linking (`https://wa.me/`) with a pre-filled message to enable one-click chat.
 
 ## Author
 Tyclone81
