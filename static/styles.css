@@ -73,6 +73,14 @@ nav {
     transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
+.hamburger {
+    flex-direction: column;
+    line-height: 0;
+}
+.hamburger .bar {
+    border-radius: 2px;
+}
+
 /* Full-screen mobile menu overlay */
 .mobile-menu {
     position: fixed;
@@ -578,19 +586,22 @@ footer strong {
         position: relative;
     }
 
-    /* place hamburger close to the left edge */
+    /* place hamburger inside the nav, next to the logo */
     .hamburger {
         display: inline-flex;
         position: absolute;
-        left: 12px;
+        left: 20px; /* aligns with container padding */
         top: 50%;
         transform: translateY(-50%);
-        padding: 10px;
+        padding: 6px;
         width: 44px;
         height: 44px;
+        z-index: 2500;
+        background: transparent;
+        border-radius: 6px;
     }
 
-    /* nudge logo to avoid overlap with hamburger */
+    /* nudge the logo right so the hamburger sits visually in the logo area */
     .logo {
         margin-left: 64px !important;
     }
