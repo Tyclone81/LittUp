@@ -25,11 +25,11 @@ body {
     padding: 0 20px;
 }
 
-/* FORCE navigation container to have NO padding */
+/* Navigation container: keep nav content centered to align with page */
 nav .container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    max-width: 100% !important;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 /* ============================================ */
 /* NAVIGATION                                   */
@@ -50,8 +50,75 @@ nav {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+}
+
+/* Hamburger button (hidden on desktop) */
+.hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+}
+.hamburger .bar {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #e5e7eb;
+    margin: 4px 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Full-screen mobile menu overlay */
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 24, 39, 0.98);
+    color: #fff;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    transform: translateY(-10%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.35s cubic-bezier(.2,.9,.3,1), opacity 0.25s ease;
+}
+.mobile-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+.mobile-menu .mobile-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.mobile-nav-links {
+    list-style: none;
+    display: grid;
+    gap: 18px;
+    text-align: center;
+}
+.mobile-nav-links a {
+    color: #fff;
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-weight: 700;
+}
+.mobile-nav-links a:hover {
+    color: #fbbf24;
 }
 
 .logo {
@@ -502,9 +569,30 @@ footer strong {
         gap: 12px;
     }
 
+    /* On mobile hide the inline nav and show the hamburger */
     .nav-links {
-        justify-content: center;
-        gap: 16px;
+        display: none;
+    }
+
+    .nav-container {
+        position: relative;
+    }
+
+    /* place hamburger close to the left edge */
+    .hamburger {
+        display: inline-flex;
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px;
+        width: 44px;
+        height: 44px;
+    }
+
+    /* nudge logo to avoid overlap with hamburger */
+    .logo {
+        margin-left: 64px !important;
     }
 
     .hero h1 {
@@ -572,6 +660,11 @@ footer strong {
 }
 /* ============================================ */
 /* SERVICE CARDS - HOVER ZOOM                  */
+
+/* When mobile menu is open, prevent body scrolling */
+body.menu-open {
+    overflow: hidden;
+}
 /* ============================================ */
 
 .service-card {
